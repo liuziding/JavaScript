@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul class="nav">
+			<li>榴莲</li>
+			<li>臭豆腐</li>
+			<li>鲍鱼</li>
+			<li>猴脑</li>
+		</ul>
+		<script>
+			// 闭包应用-点击 li 输出当前 li 的索引号
+			// 1. 我们可以利用动态添加属性的方式
+			var lis = document.querySelector('.nav').querySelectorAll('li');
+			/*for(var i = 0; i < lis.length; i++) {
+				lis[i].index = i;
+				lis[i].onclick = function() {
+					//console.log(i);			//所有的都输出 4
+					console.log(this.index);
+				}
+			}*/
+			
+			// 2. 利用闭包的方式得到当前小 li 的索引号
+			for(var i = 0; i < lis.length; i++) {
+				// 利用 for 循环创建了 4 个立即执行函数
+				(function(i) {
+					lis[i].onclick = function() {
+						console.log(i);
+					}
+				})(i);
+			}
+		</script>
+	</body>
+</html>

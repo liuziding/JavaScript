@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let person = {name: "lisi", age: 30, sex: '男'};
+//			let { name, age, sex } = person;
+//			console.log(name);
+//			console.log(age);
+//			console.log(sex);
+			let { name: myName } = person;
+			console.log(myName);			// 输出 lisi
+		</script>
+	</body>
+</html>

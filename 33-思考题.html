@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// 思考题 1：
+//			var name = 'The Window';
+//			var object = {
+//				name: 'My Object',
+//				getNameFunc: function() {
+//					return function() {
+//						console.log(this);				//输出 window
+//						return this.name;
+//					}
+//				}
+//			}
+//			console.log(object.getNameFunc()());		// The Window
+			
+			
+			// 思考题 2：
+			var name = 'The Window';
+			var object = {
+				name: 'My Object',
+				getNameFunc: function() {
+					var that = this;
+					console.log("this=====" + this);
+					return function() {
+						console.log("this==============" + this);
+						return that.name;
+					}
+				}
+			}
+			console.log(object.getNameFunc()());
+			
+			
+			/**
+			 * 闭包总结
+			 * 1. 闭包是什么？
+			 *		闭包是一个函数（一个作用域可以访问另一个函数的局部变量）
+			 * 2. 闭包的作用是什么？
+			 *		延伸变量的作用范围
+			 */
+		</script>
+	</body>
+</html>

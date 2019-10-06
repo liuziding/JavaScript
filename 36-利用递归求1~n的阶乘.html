@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// 利用递归函数求 1~n 的阶乘  1 * 2 * 3 * 4 * 4 * ...n
+			function fn(n) {
+				if(n == 1 || n == 2 ) {
+					return 1;
+				} else {
+					return fn(n-1) + fn(n-2);
+				}
+			}
+			console.log(fn(10));
+		</script>
+	</body>
+</html>

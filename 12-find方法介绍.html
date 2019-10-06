@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 用于找出第一个符合条件的数组成员，如果没有找到返回 undefined
+			var arys = [{
+				id: 1,
+				name: '张三'
+			}, {
+				id: 2,
+				name: '李四'
+			}];
+			let target = arys.find(item => item.id == 2);
+			console.log(target);
+		</script>
+	</body>
+</html>

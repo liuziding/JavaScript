@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//剩余参数    args: 一个数组
+			/*const sum = (...args) => {
+				let total = 0;
+				args.forEach(item => total += item);
+				return total;
+			}
+			console.log(sum(10, 20));
+			console.log(sum(10, 20, 30));*/
+			
+			let ary1 = ['张三', '李四', '王五', '赵六'];
+			let [s1, ...s2] = ary1;
+			console.log(s1);        // 输出 '张三'
+			console.log(s2);		// 输出 ['李四', '王五', '赵六']
+			
+		</script>
+	</body>
+</html>

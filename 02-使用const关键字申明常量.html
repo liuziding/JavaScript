@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//使用 const 关键字申明的常量具有块级作用域
+//			if(true) {
+//				const a = 10;
+//				if(true) {
+//					const a = 20;
+//					console.log("===" + a);
+//				}
+//				console.log("+++++" + a);
+//			}
+//			console.log(a);
+			
+			// 使用 const 关键字申明的常量必须赋予初始值
+			//const PI;
+			
+			
+			// 1. 常量赋值后，值不能修改
+			const PI = 3.14;
+			//PI = 1000;
+			//常量值对应的内存地址不可以更改
+			const ary = [100, 200];
+			ary[0] = 123;
+			//ary[1] = 345;
+			//内存地址修改了，不可以
+			//ary = [1, 2];
+			console.log(ary);
+			console.log(ary[1]);
+		</script>
+	</body>
+</html>

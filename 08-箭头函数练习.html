@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 箭头函数下的 this 指向的是 window，全局变量下的
+			var age = 100;
+			var obj = {
+				age: 20,
+				say: () => {
+					alert(this.age);
+				}
+			}
+			obj.say();
+			
+		</script>
+	</body>
+</html>

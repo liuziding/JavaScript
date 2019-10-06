@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//箭头函数不绑定 this 关键字，箭头函数中的 this ，指向的是函数定义位置的上下文 this.
+			const obj = { name: '刘自定' };
+			function fn() {
+				console.log(this);
+				return () => {
+					console.log(this);
+				}
+			}
+			const resFn = fn.call(obj);
+			resFn();
+			
+			/**
+			 *  箭头函数不绑定 this 箭头函数没有自己的 this 关键字，
+			 *  如果在箭头函数中使用 this ，this关键字将指向箭头
+			 *  函数定义位置中的 this
+			 */
+			// function fn() {
+			// 	console.log(this.name);
+			// 	return () => {
+			// 		console.log(this);
+			// 	}
+			// }
+			
+			// const obj = {name: '刘自定'};
+			// var resFn = fn.call(obj);
+			// resFn();
+		</script>
+	</body>
+</html>
